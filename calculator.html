@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>calculator</title>
+        <h2>
+            Mani Calculator
+        </h2>
+        <script>
+            
+            function disply(val)
+            {
+                document.getElementById("dummy").value+=val;
+            }
+            function solve()
+            {
+                let x=document.getElementById("dummy").value
+                let y=eval(x)
+                document.getElementById("dummy").value=y
+            }
+            function clr()
+            {
+                document.getElementById("dummy").value=" "
+            }
+        </script>
+    </head>
+    <table>
+        <thead>
+        
+        <tr>
+            <input type="text" id="dummy"/>
+            
+        </tr>
+        <tr>
+          <th><input type="button" value ="1" onclick="disply('1')"/></th>
+          <th><input type="button" value ="2" onclick="disply('2')"/></th> 
+          <th><input type="button" value ="3" onclick="disply('3')"/></th>
+          <th><input type="button" value ="+" onclick="disply('+')"/></th>
+          <th><input type="button"value ="ON"onclick="ON"></th>
+
+        </tr>
+        <tr>
+            <th><input type="button" value ="4" onclick="disply('4')"/></th>
+            <th><input type="button" value ="5" onclick="disply('5')"/></th> 
+            <th><input type="button" value ="6" onclick="disply('6')"/></th>
+            <th><input type="button" value ="-" onclick="disply('-')"/></th>
+            <th><input type="button"value ="clr" onclick="clr()"/></th>
+        </tr>
+        <tr>
+            <th><input type="button" value ="7" onclick="disply('7')"/></th>
+            <th><input type="button" value ="8" onclick="disply('8')"/></th> 
+            <th><input type="button" value ="9" onclick="disply('9')"/></th>
+            <th><input type="button" value ="*" onclick="disply('*')"/></th>
+            <th><input type="button"value ="AC" onclick="clr()"></th>
+        </tr>
+        <tr>
+            <th><input type="button" value ="." onclick="disply('.')"/></th>
+            <th><input type="button" value ="0" onclick="disply('0')"/></th> 
+            <th><input type="button" value ="/" onclick="disply('/')"/></th>
+            <th><input type="button" value ="%" onclick="disply('%')"/></th>
+            <th><input type="button"value ="="onclick="solve()"></th>
+        </tr>
+        
+        </thead>       
+    </table>
+</html>
